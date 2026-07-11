@@ -1,8 +1,5 @@
-import http from 'node:http';
 import { URL } from 'node:url';
 import { getDashboard } from './dashboard.service.js';
-
-const port = Number(process.env.PORT ?? 3001);
 
 function sendJson(res, statusCode, payload) {
   res.writeHead(statusCode, {
@@ -13,12 +10,12 @@ function sendJson(res, statusCode, payload) {
 }
 
 function getDashboardWorkspaceId(reqUrl) {
-  const url = new URL(reqUrl, `http://localhost:${port}`);
+  const url = new URL(reqUrl, 'http://localhost');
   const match = url.pathname.match(/^\/api\/workspaces\/([^/]+)\/dashboard$/);
   return match ? decodeURIComponent(match[1]) : null;
 }
 
-const server = http.createServer(async (req, res) => {
+export default async function handler(req, res) {
   if (req.method === 'GET') {
     const workspaceId = getDashboardWorkspaceId(req.url);
 
@@ -44,8 +41,4 @@ const server = http.createServer(async (req, res) => {
       message: 'Route not found.'
     }
   });
-});
-
-server.listen(port, () => {
-  console.log(`ABE Sprint 1 backend listening on http://localhost:${port}`);
-});
+}

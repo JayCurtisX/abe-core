@@ -1,8 +1,12 @@
 {
-  "name": "abe-sprint1-backend",
+  "name": "abe-core",
   "version": "1.0.0",
+  "description": "Deterministic business execution engine powering ABE Lite.",
   "type": "module",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "start": "node src/server.js",
     "test": "node --test tests/*.test.js",
