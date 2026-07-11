@@ -1,0 +1,32 @@
+{
+  "workspaceId": "00000000-0000-0000-0000-000000000001",
+  "businessState": {
+    "state": "Growth Constraint Mode",
+    "why": "The business has demand, but follow-up is delayed.",
+    "confidence": 82,
+    "biggestConstraint": "Lead follow-up",
+    "biggestOpportunity": "Convert warm leads into booked calls",
+    "nextAction": "Prepare follow-up drafts and same-day call tasks"
+  },
+  "metrics": {
+    "newLeads": 12,
+    "contactedLeads": 4,
+    "uncontactedLeads": 8,
+    "overdueTasks": 7,
+    "estimatedPipeline": 32000,
+    "goal": "Book 20 sales calls"
+  },
+  "recentActivity": [
+    {
+      "id": "a0000000-0000-0000-0000-000000000001",
+      "label": "12 new leads entered the system",
+      "timestamp": "2026-07-10T09:00:00"
+    },
+    {
+      "id": "a0000000-0000-0000-0000-000000000002",
+      "label": "ABE identified Growth Constraint Mode",
+      "timestamp": "2026-07-10T09:01:00"
+    }
+  ],
+  "dataLabel": "Demo Data"
+}
